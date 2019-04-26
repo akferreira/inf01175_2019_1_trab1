@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/sd/trab1/trab1_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="bip_usecase_utils_pkg_v2_0" />
+            <top_module name="bip_utils_pkg_v2_0" />
+            <top_module name="c_addsub_pkg_v11_0" />
+            <top_module name="c_reg_fd_v11_0_comp" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="textio" />
+            <top_module name="trab1_tb" />
+            <top_module name="xbip_addsub_v2_0_comp" />
+            <top_module name="xbip_pipe_v2_0_xst_comp" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/trab1_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/trab1_tb/up_down" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">up_down</obj_property>
+      <obj_property name="ObjectShortName">up_down</obj_property>
+   </wvobject>
+   <wvobject fp_name="/trab1_tb/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/trab1_tb/count" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">count</obj_property>
+      <obj_property name="ObjectShortName">count</obj_property>
+   </wvobject>
+   <wvobject fp_name="/trab1_tb/load" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">load</obj_property>
+      <obj_property name="ObjectShortName">load</obj_property>
+   </wvobject>
+   <wvobject fp_name="/trab1_tb/load_input" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">load_input[3:0]</obj_property>
+      <obj_property name="ObjectShortName">load_input[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/trab1_tb/sel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sel</obj_property>
+      <obj_property name="ObjectShortName">sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/trab1_tb/value" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">value[3:0]</obj_property>
+      <obj_property name="ObjectShortName">value[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/trab1_tb/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/trab1_tb/uut/sub_8bit" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sub_8bit[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sub_8bit[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/trab1_tb/uut/sum_8bit" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sum_8bit[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sum_8bit[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/trab1_tb/uut/reg_mux_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">reg_mux_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_mux_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/trab1_tb/uut/mux_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mux_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mux_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/trab1_tb/uut/Inst_display_driver/digit0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">digit0[6:0]</obj_property>
+      <obj_property name="ObjectShortName">digit0[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/trab1_tb/uut/Inst_display_driver/digit1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">digit1[6:0]</obj_property>
+      <obj_property name="ObjectShortName">digit1[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/trab1_tb/uut/Inst_display_driver/display_sel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">display_sel[3:0]</obj_property>
+      <obj_property name="ObjectShortName">display_sel[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/trab1_tb/uut/Inst_display_driver/display_seg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">display_seg[6:0]</obj_property>
+      <obj_property name="ObjectShortName">display_seg[6:0]</obj_property>
+   </wvobject>
+</wave_config>
