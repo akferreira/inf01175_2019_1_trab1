@@ -36,6 +36,7 @@ entity trab1 is
            count : in  STD_LOGIC;
 			  sel : in STD_LOGIC;
            load : in  STD_LOGIC;
+		     decimal_point: out std_logic;
            load_input : in  STD_LOGIC_VECTOR (3 downto 0);
 			  display_pins: out STD_LOGIC_VECTOR(6 DOWNTO 0);
 			  display_sel_pins: out STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -99,7 +100,9 @@ COMPONENT display_driver
 		clk : IN std_logic;
 		reset : IN std_logic;
 		digit0 : IN std_logic_vector(6 downto 0);
-		digit1 : IN std_logic_vector(6 downto 0);          
+		digit1 : IN std_logic_vector(6 downto 0);   
+		digit2 : IN std_logic_vector(6 downto 0);
+		digit3 : IN std_logic_vector(6 downto 0); 		
 		display_sel : OUT std_logic_vector(3 downto 0);
 		display_seg : OUT std_logic_vector(6 downto 0)
 		);
@@ -132,6 +135,8 @@ signal reg_mux_out : STD_LOGIC_VECTOR(7 DOWNTO 0) := ZERO_8bit;
 --display segments
 signal digit1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 signal digit0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+signal digit2: STD_LOGIC_VECTOR(6 DOWNTO 0);
+signal digit3: STD_LOGIC_VECTOR(6 DOWNTO 0);
 
 
 
@@ -157,15 +162,22 @@ trab_sub : subtract
 PORT MAP (a => e0,b => e1,clk => clk,ce => '1',s => sub_8bit);
 
 
-nibble0: nibble_7seg 
-PORT MAP(nibble => reg_mux_out(7 downto 4),clk => clk,reset => reset,display_anode => digit0);
+nibble2: nibble_7seg 
+PORT MAP(nibble => reg_mux_out(7 downto 4),clk => clk,reset => reset,display_anode => digit2);
 	
+nibble3: nibble_7seg 
+PORT MAP(nibble => reg_mux_out(3 downto 0),clk => clk,reset => reset,display_anode => digit3);
+
 nibble1: nibble_7seg 
-PORT MAP(nibble => reg_mux_out(3 downto 0),clk => clk,reset => reset,display_anode => digit1);
+PORT MAP(nibble => ZERO_8bit(7 downto 4),clk => clk,reset => reset,display_anode => digit1);
+	
+nibble0: nibble_7seg 
+PORT MAP(nibble => ZERO_8bit(3 downto 0),clk => clk,reset => reset,display_anode => digit0);
 
 Inst_display_driver: display_driver 
-PORT MAP(clk => clk,reset => reset,digit0 => digit0,digit1 => digit1,display_sel => display_sel_pins,display_seg => display_pins);
+PORT MAP(clk => clk,reset => reset,digit0 => digit0,digit1 => digit1,digit2 => digit2,digit3 => digit3,display_sel => display_sel_pins,display_seg => display_pins);
 
+decimal_point <= '1';
 --debugging, output somente para visualizar no simulador
 value <= result;
 

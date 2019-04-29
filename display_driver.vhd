@@ -37,6 +37,8 @@ entity display_driver is
 			  reset : in  STD_LOGIC;
            digit0 : in  STD_LOGIC_VECTOR (6 downto 0);
            digit1 : in  STD_LOGIC_VECTOR (6 downto 0);
+			  digit2 : in  STD_LOGIC_VECTOR (6 downto 0);
+			  digit3 : in  STD_LOGIC_VECTOR (6 downto 0);
 			  display_sel : out STD_LOGIC_VECTOR(3 downto 0);
            display_seg : out  STD_LOGIC_VECTOR (6 downto 0));
 end display_driver;
@@ -47,12 +49,12 @@ type T_STATE is (S0, S1,S2,S3);
 signal estado, prox_estado : T_STATE; 
 signal count_enable : STD_LOGIC;
 signal count_end : STD_LOGIC;
-signal count: std_logic_vector(15 downto 0);
+signal count: std_logic_vector(32 downto 0);
 
-constant display0 : STD_LOGIC_VECTOR(3 downto 0) := "0001";
-constant display1 : STD_LOGIC_VECTOR(3 downto 0) := "0010";
-constant display2 : STD_LOGIC_VECTOR(3 downto 0) := "0100";
-constant display3 : STD_LOGIC_VECTOR(3 downto 0) := "1000";
+constant display0 : STD_LOGIC_VECTOR(3 downto 0) := "1110";
+constant display1 : STD_LOGIC_VECTOR(3 downto 0) := "1101";
+constant display2 : STD_LOGIC_VECTOR(3 downto 0) := "1011";
+constant display3 : STD_LOGIC_VECTOR(3 downto 0) := "0111";
 
 begin
 
@@ -84,6 +86,7 @@ begin
 	elsif (clk'event and clk ='1') then
 				if count_end = '1' then
 					count <= (others => '0');
+					count_end <= '0';
 				else
 					count <= std_logic_vector(unsigned(count)+1);
 					count_end <= count(15);
@@ -115,11 +118,11 @@ elsif estado = s1 then
 	
 elsif estado = s2 then
 	display_sel <= display2;
-	display_seg <= "0000001";
+	display_seg <= digit2;
 	
-else
+elsif estado = s3 then 
 	display_sel <= display3;
-	display_seg <= "0111111";
+	display_seg <= digit3;
 
 end if;
 end process;

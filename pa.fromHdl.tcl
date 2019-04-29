@@ -1,21 +1,13 @@
 
 # PlanAhead Launch Script for Pre-Synthesis Floorplanning, created by Project Navigator
 
-create_project -name trab1 -dir "C:/sd/trab1/planAhead_run_1" -part xc3s100ecp132-4
+create_project -name trab1 -dir "C:/sd/inf01175_2019_1_trab1/planAhead_run_5" -part xc3s100ecp132-4
 set_param project.pinAheadLayout yes
 set srcset [get_property srcset [current_run -impl]]
 set_property target_constrs_file "trab1.ucf" [current_fileset -constrset]
-set hdlfile [add_files [list {ipcore_dir/adder.vhd}]]
-set_property file_type VHDL $hdlfile
-set_property library work $hdlfile
-set hdlfile [add_files [list {ipcore_dir/subtract.vhd}]]
-set_property file_type VHDL $hdlfile
-set_property library work $hdlfile
 set hdlfile [add_files [list {nibble_7seg.vhd}]]
 set_property file_type VHDL $hdlfile
 set_property library work $hdlfile
-add_files [list {ipcore_dir/subtract.ngc}]
-add_files [list {ipcore_dir/adder.ngc}]
 set hdlfile [add_files [list {display_driver.vhd}]]
 set_property file_type VHDL $hdlfile
 set_property library work $hdlfile

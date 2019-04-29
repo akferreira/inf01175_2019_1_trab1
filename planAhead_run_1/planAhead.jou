@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Mon Apr 29 12:45:29 2019
+# Process ID: 6124
+# Log file: C:/sd/inf01175_2019_1_trab1/planAhead_run_1/planAhead.log
+# Journal file: C:/sd/inf01175_2019_1_trab1/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/sd/inf01175_2019_1_trab1/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
