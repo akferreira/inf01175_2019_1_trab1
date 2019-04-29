@@ -1,0 +1,15 @@
+# Output products list for <subtract>
+_xmsgs/pn_parser.xmsgs
+subtract/doc/c_addsub_v11_0_readme.txt
+subtract/doc/c_addsub_v11_0_vinfo.html
+subtract/doc/ds214_addsub.pdf
+subtract.asy
+subtract.gise
+subtract.ngc
+subtract.sym
+subtract.vhd
+subtract.vho
+subtract.xco
+subtract.xise
+subtract_flist.txt
+subtract_xmdf.tcl
