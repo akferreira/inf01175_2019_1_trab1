@@ -12,10 +12,6 @@ NET "up_down" LOC = P11;
 NET "clk" LOC = B8;
 
 
-NET "display_sel_pins[3]" LOC = F12;
-NET "display_sel_pins[2]" LOC = J12;
-NET "display_sel_pins[1]" LOC = M13;
-NET "display_sel_pins[0]" LOC = K14;
 NET "display_pins[6]" LOC = L14;
 NET "display_pins[5]" LOC = H12;
 NET "display_pins[4]" LOC = N14;
@@ -24,6 +20,12 @@ NET "display_pins[2]" LOC = P12;
 NET "display_pins[1]" LOC = L13;
 NET "display_pins[0]" LOC = M12;
 
-# PlanAhead Generated physical constraints 
 
 NET "decimal_point" LOC = N13;
+
+# PlanAhead Generated physical constraints 
+
+NET "display_sel_pins[3]" LOC = K14;
+NET "display_sel_pins[2]" LOC = M13;
+NET "display_sel_pins[1]" LOC = J12;
+NET "display_sel_pins[0]" LOC = F12;

@@ -51,10 +51,10 @@ signal count_enable : STD_LOGIC;
 signal count_end : STD_LOGIC;
 signal count: std_logic_vector(32 downto 0);
 
-constant display0 : STD_LOGIC_VECTOR(3 downto 0) := "1110";
-constant display1 : STD_LOGIC_VECTOR(3 downto 0) := "1101";
-constant display2 : STD_LOGIC_VECTOR(3 downto 0) := "1011";
-constant display3 : STD_LOGIC_VECTOR(3 downto 0) := "0111";
+constant display3 : STD_LOGIC_VECTOR(3 downto 0) := "1110";
+constant display2 : STD_LOGIC_VECTOR(3 downto 0) := "1101";
+constant display1 : STD_LOGIC_VECTOR(3 downto 0) := "1011";
+constant display0 : STD_LOGIC_VECTOR(3 downto 0) := "0111";
 
 begin
 

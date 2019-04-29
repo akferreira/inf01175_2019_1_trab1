@@ -1,0 +1,183 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/pa.fromHdl.tcl
+# create_project -name trab1 -dir "/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/planAhead_run_2" -part xc3s100ecp132-4
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "trab1.ucf" [current_fileset -constrset]
+Adding file '/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/trab1.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {nibble_7seg.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ipcore_dir/subtract.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# add_files [list {ipcore_dir/subtract.ngc}]
+# add_files [list {ipcore_dir/adder.ngc}]
+# set hdlfile [add_files [list {ipcore_dir/adder.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {display_driver.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {counter_4bit.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {button_singlepress.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {trab1.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top trab1 $srcset
+# add_files [list {trab1.ucf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/subtract.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/adder.ncf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc3s100ecp132-4
+Using Verific elaboration
+Parsing VHDL file "/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/nibble_7seg.vhd" into library work
+Parsing VHDL file "/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/ipcore_dir/subtract.vhd" into library work
+Parsing VHDL file "/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/ipcore_dir/adder.vhd" into library work
+Parsing VHDL file "/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/display_driver.vhd" into library work
+Parsing VHDL file "/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/counter_4bit.vhd" into library work
+Parsing VHDL file "/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/button_singlepress.vhd" into library work
+Parsing VHDL file "/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/trab1.vhd" into library work
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design adder.ngc ...
+WARNING:NetListWriters:298 - No output is written to adder.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file adder.edif ...
+ngc2edif: Total memory usage is 92092 kilobytes
+
+Reading core file '/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/ipcore_dir/adder.ngc' for (cell view 'adder', library 'work', file 'adder.vhd')
+Parsing EDIF File [./.Xil/PlanAhead-19850-nelarus-pc/ngc2edif/adder.edif]
+Finished Parsing EDIF File [./.Xil/PlanAhead-19850-nelarus-pc/ngc2edif/adder.edif]
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design subtract.ngc ...
+WARNING:NetListWriters:298 - No output is written to subtract.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file subtract.edif ...
+ngc2edif: Total memory usage is 92148 kilobytes
+
+Reading core file '/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/ipcore_dir/subtract.ngc' for (cell view 'subtract', library 'work', file 'subtract.vhd')
+Parsing EDIF File [./.Xil/PlanAhead-19850-nelarus-pc/ngc2edif/subtract.edif]
+Finished Parsing EDIF File [./.Xil/PlanAhead-19850-nelarus-pc/ngc2edif/subtract.edif]
+INFO: [Designutils 20-910] Reading macro library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Loading clock regions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s100e/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s100e/ClockBuffers.xml
+Loading package from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s100e/cp132/Package.xml
+Loading io standards from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s100e/cp132/SSORules.xml
+Loading list of drcs for the architecture : /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing 38-77] Reading timing library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+INFO: [Timing 38-34] Done reading timing library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+Parsing UCF File [/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/trab1.ucf]
+Finished Parsing UCF File [/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/trab1.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 0011310d
+update_compile_order -fileset sim_1
+refresh_design
+Using Verific elaboration
+Parsing VHDL file "/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/nibble_7seg.vhd" into library work
+Parsing VHDL file "/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/ipcore_dir/subtract.vhd" into library work
+Parsing VHDL file "/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/ipcore_dir/adder.vhd" into library work
+Parsing VHDL file "/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/display_driver.vhd" into library work
+Parsing VHDL file "/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/counter_4bit.vhd" into library work
+Parsing VHDL file "/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/button_singlepress.vhd" into library work
+Parsing VHDL file "/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/trab1.vhd" into library work
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design adder.ngc ...
+WARNING:NetListWriters:298 - No output is written to adder.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file adder.edif ...
+ngc2edif: Total memory usage is 92144 kilobytes
+
+Reading core file '/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/ipcore_dir/adder.ngc' for (cell view 'adder', library 'work', file 'adder.vhd')
+Parsing EDIF File [./.Xil/PlanAhead-19850-nelarus-pc/ngc2edif/adder.edif]
+Finished Parsing EDIF File [./.Xil/PlanAhead-19850-nelarus-pc/ngc2edif/adder.edif]
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design subtract.ngc ...
+WARNING:NetListWriters:298 - No output is written to subtract.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file subtract.edif ...
+ngc2edif: Total memory usage is 92144 kilobytes
+
+Reading core file '/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/ipcore_dir/subtract.ngc' for (cell view 'subtract', library 'work', file 'subtract.vhd')
+Parsing EDIF File [./.Xil/PlanAhead-19850-nelarus-pc/ngc2edif/subtract.edif]
+Finished Parsing EDIF File [./.Xil/PlanAhead-19850-nelarus-pc/ngc2edif/subtract.edif]
+INFO: [Designutils 20-910] Reading macro library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+INFO: [Timing 38-77] Reading timing library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+INFO: [Timing 38-34] Done reading timing library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+Parsing UCF File [/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/trab1.ucf]
+Finished Parsing UCF File [/mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/trab1.ucf]
+set_property package_pin "" [get_ports [list  {display_sel_pins[0]}]]
+set_property package_pin "" [get_ports [list  {display_sel_pins[1]}]]
+set_property package_pin "" [get_ports [list  {display_sel_pins[2]}]]
+set_property package_pin "" [get_ports [list  {display_sel_pins[3]}]]
+startgroup
+set_property package_pin K14 [get_ports {display_sel_pins[3]}]
+endgroup
+startgroup
+set_property package_pin M13 [get_ports {display_sel_pins[2]}]
+endgroup
+startgroup
+set_property package_pin J12 [get_ports {display_sel_pins[1]}]
+endgroup
+startgroup
+set_property package_pin J12 [get_ports {display_sel_pins[1]}]
+endgroup
+startgroup
+set_property package_pin F12 [get_ports {display_sel_pins[0]}]
+endgroup
+save_constraints
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Mon Apr 29 20:40:07 2019...
+INFO: [Common 17-83] Releasing license: PlanAhead

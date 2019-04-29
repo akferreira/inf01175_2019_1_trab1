@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Mon Apr 29 20:36:03 2019
+# Process ID: 19850
+# Log file: /mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/planAhead_run_2/planAhead.log
+# Journal file: /mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /mnt/DISK2_MIKU/Documents/SD/inf01175_2019_1_trab1/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+refresh_design
+set_property package_pin "" [get_ports [list  {display_sel_pins[0]}]]
+set_property package_pin "" [get_ports [list  {display_sel_pins[1]}]]
+set_property package_pin "" [get_ports [list  {display_sel_pins[2]}]]
+set_property package_pin "" [get_ports [list  {display_sel_pins[3]}]]
+startgroup
+set_property package_pin K14 [get_ports {display_sel_pins[3]}]
+endgroup
+startgroup
+set_property package_pin M13 [get_ports {display_sel_pins[2]}]
+endgroup
+startgroup
+set_property package_pin J12 [get_ports {display_sel_pins[1]}]
+endgroup
+startgroup
+set_property package_pin J12 [get_ports {display_sel_pins[1]}]
+endgroup
+startgroup
+set_property package_pin F12 [get_ports {display_sel_pins[0]}]
+endgroup
+save_constraints
