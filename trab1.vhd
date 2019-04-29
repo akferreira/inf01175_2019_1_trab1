@@ -111,7 +111,7 @@ COMPONENT display_driver
 --debug variables
 signal result : std_logic_vector(3 downto 0);
 
-
+signal ireset : STD_LOGIC;
 signal icount : STD_lOGIC;
 signal iload : STD_lOGIC;
 signal sum_8bit : STD_LOGIC_VECTOR(7 DOWNTO 0); --armazena resultado da soma
@@ -142,6 +142,9 @@ signal digit3: STD_LOGIC_VECTOR(6 DOWNTO 0);
 
 begin
 
+reset_bt : button_singlepress 
+PORT MAP(button => reset, clk => clk, press => ireset);
+
 Inst_button_singlepress: button_singlepress 
 PORT MAP(button => count,clk => clk,press => icount);
 
@@ -150,7 +153,7 @@ PORT MAP(button => load,clk => clk,press => iload);
 	
 Inst_counter_4bit: counter_4bit 
 PORT MAP(up_down => up_down,count_enable => icount,load => iload,
-load_input => load_input,reset => reset,clk => clk,C => result);
+load_input => load_input,reset => ireset,clk => clk,C => result);
 	
 e0 <= (ZERO_8bit(7 downto 4) & result);
 e1 <= (ZERO_8bit(7 downto 4) & "0011");
@@ -163,19 +166,19 @@ PORT MAP (a => e0,b => e1,clk => clk,ce => '1',s => sub_8bit);
 
 
 nibble2: nibble_7seg 
-PORT MAP(nibble => reg_mux_out(7 downto 4),clk => clk,reset => reset,display_anode => digit2);
+PORT MAP(nibble => reg_mux_out(7 downto 4),clk => clk,reset => ireset,display_anode => digit2);
 	
 nibble3: nibble_7seg 
-PORT MAP(nibble => reg_mux_out(3 downto 0),clk => clk,reset => reset,display_anode => digit3);
+PORT MAP(nibble => reg_mux_out(3 downto 0),clk => clk,reset => ireset,display_anode => digit3);
 
 nibble1: nibble_7seg 
-PORT MAP(nibble => ZERO_8bit(7 downto 4),clk => clk,reset => reset,display_anode => digit1);
+PORT MAP(nibble => ZERO_8bit(7 downto 4),clk => clk,reset => ireset,display_anode => digit1);
 	
 nibble0: nibble_7seg 
-PORT MAP(nibble => ZERO_8bit(3 downto 0),clk => clk,reset => reset,display_anode => digit0);
+PORT MAP(nibble => ZERO_8bit(3 downto 0),clk => clk,reset => ireset,display_anode => digit0);
 
 Inst_display_driver: display_driver 
-PORT MAP(clk => clk,reset => reset,digit0 => digit0,digit1 => digit1,digit2 => digit2,digit3 => digit3,display_sel => display_sel_pins,display_seg => display_pins);
+PORT MAP(clk => clk,reset => ireset,digit0 => digit0,digit1 => digit1,digit2 => digit2,digit3 => digit3,display_sel => display_sel_pins,display_seg => display_pins);
 
 decimal_point <= '1';
 --debugging, output somente para visualizar no simulador
